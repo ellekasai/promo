@@ -1,0 +1,6 @@
+@import "neat/neat-helpers";
+$gutter: 0em;
+$max-width: 1024px;
+$desktop: new-breakpoint(min-width 1024px);
+$mobile: new-breakpoint(max-width 1023px);
+$iphone: new-breakpoint(max-width 480px);

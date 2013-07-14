@@ -1,0 +1,34 @@
+@mixin shift-columns($_columns, $_parent-columns) {
+  $parent-columns: $_parent-columns;
+  @include shift($_columns);
+  @include media($mobile) {
+    @include shift(0);
+  }
+}
+
+@mixin add-image-padding {
+  padding: {
+    right: $image-padding;
+    bottom: $image-padding;
+  }
+}
+
+@mixin span-columns-media($args...) {
+  @include span-columns($args...);
+  @include media($mobile) {
+    @include span-columns(1 of 1);
+  }
+}
+
+@mixin padding-top-media($padding-top) {
+  padding-top: $padding-top;
+  @include media($mobile) {
+    padding-top: 0;
+  }
+}
+@mixin height-media($height) {
+  height: $height;
+  @include media($mobile) {
+    height: auto;
+  }
+}

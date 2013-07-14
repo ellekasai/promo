@@ -1,0 +1,9 @@
+permalink: /pages/:title
+markdown: redcarpet
+
+title: Promo
+subtitle: By Elle Kasai
+description: 足成モデル､笠井枝理依(かさいえりい)の素材写真を紹介するサイトです｡2011年の5月から活動を始め､現在では1450枚以上の素材写真が配布されています｡ここではテーマ毎にいくつか写真をピックアップしてひとつのページにまとめ､より素材写真の魅力が伝わるようアレンジしてみました｡
+
+settings:
+  host_name: promo.ellekasai.com

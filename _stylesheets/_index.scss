@@ -1,0 +1,134 @@
+
+.content-left,
+.content-right {
+  @include span-columns-media(6 of 12);
+}
+
+.content-left {
+  .block-1-1-1,
+  .block-1-1-2,
+  .block-1-2,
+  .block-2-1,
+  .block-2-2,
+  .block-3-1,
+  .block-3-2-1,
+  .block-3-2-2,
+  .block-4-1,
+  .block-4-2 {
+    background-size: cover;
+  }
+  .block-1,
+  .block-2,
+  .block-3,
+  .block-4,
+  .block-1-1-1,
+  .block-1-1-2,
+  .block-3-2-1,
+  .block-3-2-2 {
+    @include row;
+  }
+  .block-1-1,
+  .block-2-1,
+  .block-3-2,
+  .block-4-1 {
+    @include span-columns-media(2 of 6);
+    @include height-media(200px);
+  }
+  .block-1-2,
+  .block-2-2,
+  .block-3-1,
+  .block-4-2 {
+    @include span-columns-media(4 of 6);
+    @include height-media(200px);
+  }
+  .block-1-1-1,
+  .block-1-1-2,
+  .block-3-2-1,
+  .block-3-2-2 {
+    @include height-media(100px);
+  }
+}
+.content-right {
+  .block-1 {
+    @include span-columns-media(4 of 6);
+    float: right;
+  }
+  .block-2 {
+    @include span-columns-media(6 of 6);
+  }
+  .block-1 {
+    @include shift-columns(2, 6);
+    @include linear-gradient(#ff5542, #ff8c80);
+    margin-top: 50px;
+    @include media($mobile) {
+      margin-top: 0px;
+    }
+    color: white;
+  }
+  .title, .subtitle {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    text-align: center;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  .title {
+    font-size: 87px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: -15px;
+    @include media($iphone) {
+      font-size: 61px;
+      line-height: 1.3;
+    }
+  }
+  .subtitle {
+    font-size: 47px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    @include media($iphone) {
+      font-size: 32px;
+      line-height: 1.3;
+    }
+  }
+  .block-2 {
+    margin-top: 65px;
+    @include media($mobile) {
+      margin-top: 40px;
+    }
+  }
+  .table-contents,
+  .table-content a {
+    padding-left: 50px;
+    @include media($mobile) {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  .table-contents {
+    padding-bottom: 25px;
+  }
+  .table-content {
+    ul {
+      padding-left: 0;
+      @include media($mobile) {
+        padding-bottom: 40px;
+      }
+    }
+    li {
+      list-style: none;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #aaa;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:hover {
+          background-color: #f3f3f3;
+          color: #aaa - #333;
+        }
+      }
+    }
+  }
+}

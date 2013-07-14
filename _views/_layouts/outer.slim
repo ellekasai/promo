@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    title
+      | {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    meta content="width=device-width, intial-scale=1.0, maximum-scale=1.0" name="viewport"
+    link href="/stylesheets/promo.css" rel="stylesheet"
+    link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'
+    script type="text/javascript" src="/javascripts/prefixfree.min.js"
+    meta property="og:image" content="http://{{ site.settings.host_name }}{{ page.cover }}"
+    meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+    meta property="og:type" content="blog"
+    meta property="og:url" content="http://{{ site.settings.host_name }}{% if page.url !='/index.html' %}{{ page.url }}/{% endif %}"
+
+  body
+    | {% if page.name == "index" %}
+    .background-container.gallery.items-10
+      | {% for page in site.posts %}
+      .background-image.item style="background-image: url({{ page.cover }});"
+      | {% endfor %}
+    | {% else %}
+    .background-image style="background-image: url({{ page.cover }});"
+    | {% endif %}
+    .background-image-overlay
+    .background
+      .background-inner
+        | {% if page.name != "index" %}
+        .top-section class="{{ page.name }}"
+          a.index-button href="/"
+            | Promo <span>by Elle Kasai</span>
+          .tip data-previous="{{ page.previous.url }}" data-next="{{ page.next.url }}"
+            | ヒント: ←→キーでページを移動できます｡
+        | {% endif %}
+        .container
+          div class="{{ page.name }}"
+            | {{ content }}
+        .copy
+          span &copy; 2013 Elle Kasai |
+          '
+          a href="https://twitter.com/Krizel77" target="_blank"
+            | Twitter: @Krizel77
+          '
+          span |
+          '
+          a href="http://ellekasai.com/" target="_blank"
+            | Blog: ellekasai.com
+          '
+          span
+            | |
+          '
+          a href="https://github.com/ellekasai/promo" target="_blank"
+            | Source on GitHub
+    script type="text/javascript" src="/javascripts/jquery-1.10.1.min.js"
+    script type="text/javascript" src="/javascripts/mousetrap.min.js"
+    script type="text/javascript" src="/javascripts/modernizr.custom.min.js"
+    script type="text/javascript" src="/javascripts/promo-ck.js"
+    javascript:
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36051690-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
