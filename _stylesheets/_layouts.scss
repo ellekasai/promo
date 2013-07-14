@@ -51,6 +51,11 @@
 .top-section {
   @include outer-container;
   margin-top: 20px;
+  &.index {
+    @include media($mobile) {
+      margin-top: 0;
+    }
+  }
 }
 
 .container > div {

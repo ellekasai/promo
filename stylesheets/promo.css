@@ -622,6 +622,11 @@ body {
 .top-section:after {
   clear: both;
 }
+@media screen and (max-width: 1023px) {
+  .top-section.index {
+    margin-top: 0;
+  }
+}
 
 .container > div {
   position: relative;

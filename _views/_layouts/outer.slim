@@ -26,13 +26,13 @@ html
     .background-image-overlay
     .background
       .background-inner
-        | {% if page.name != "index" %}
         .top-section class="{{ page.name }}"
+          | {% if page.name != "index" %}
           a.index-button href="/"
             | Promo <span>by Elle Kasai</span>
           .tip data-previous="{{ page.previous.url }}" data-next="{{ page.next.url }}"
             | ヒント: ←→キーでページを移動できます｡
-        | {% endif %}
+          | {% endif %}
         .container
           div class="{{ page.name }}"
             | {{ content }}

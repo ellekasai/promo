@@ -28,14 +28,13 @@
     <div class="background-image-overlay"></div>
     <div class="background">
       <div class="background-inner">
-        {% if page.name != "index" %}
         <div class="top-section {{ page.name }}">
-          <a class="index-button" href="/">Promo <span>by Elle Kasai</span></a>
+          {% if page.name != "index" %}<a class="index-button" href="/">Promo <span>by Elle Kasai</span></a>
           <div class="tip" data-next="{{ page.next.url }}" data-previous="{{ page.previous.url }}">
             ヒント: ←→キーでページを移動できます｡
           </div>
+          {% endif %}
         </div>
-        {% endif %}
         <div class="container">
           <div class="{{ page.name }}">
             {{ content }}
