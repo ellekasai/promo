@@ -9,6 +9,13 @@ $(function() {
     }, function() {
       $(".content-left a").removeClass("image-dark");
     });
+
+    $(".cssfilters .content-left a").hover(function() {
+      $(".content-left a").addClass("image-dark");
+      $(this).removeClass("image-dark");
+    }, function() {
+      $(".content-left a").removeClass("image-dark");
+    });
   }
   if ($(".tip").length) {
     Mousetrap.bind("right", function(){
