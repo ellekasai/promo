@@ -51,7 +51,7 @@
 .top-section {
   @include outer-container;
   margin-top: 20px;
-  &.index {
+  &.index.html {
     @include media($mobile) {
       margin-top: 0;
     }
@@ -64,7 +64,7 @@
     top: $image-padding;
     left: $image-padding;
   }
-  &.index-html {
+  &.index.html {
     padding: {
       top: 0;
       left: 0;
