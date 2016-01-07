@@ -623,7 +623,7 @@ body {
   clear: both;
 }
 @media screen and (max-width: 1023px) {
-  .top-section.index {
+  .top-section.index.html {
     margin-top: 0;
   }
 }
@@ -633,7 +633,7 @@ body {
   padding-top: 10px;
   padding-left: 10px;
 }
-.container > div.index {
+.container > div.index.html {
   padding-top: 0;
   padding-left: 0;
 }
