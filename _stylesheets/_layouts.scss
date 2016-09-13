@@ -64,10 +64,10 @@
     top: $image-padding;
     left: $image-padding;
   }
-  .promo-index {
-    margin: {
-      top: $image-padding * -1;
-      left: $image-padding * -1;
+  &.index.html {
+    padding: {
+      top: 0;
+      left: 0;
     }
   }
 }

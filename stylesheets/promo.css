@@ -633,9 +633,9 @@ body {
   padding-top: 10px;
   padding-left: 10px;
 }
-.container > div .promo-index {
-  margin-top: -10px;
-  margin-left: -10px;
+.container > div.index.html {
+  padding-top: 0;
+  padding-left: 0;
 }
 
 .tip {

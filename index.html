@@ -4,73 +4,71 @@ name: index
 cover: /images/elle-dayou/4.jpg
 ---
 
-<div class="promo-index">
-  <div class="content-left">
-    <div class="block-1">
-      <div class="block-1-1">
-        <div class="block-1-1-1">
-          <a class="js-index-image-0 img" href="{{ site.posts[0].url }}" style="background-image: url({{ site.posts[0].cover }});"></a><img class="mobile-image" src="{{ site.posts[0].cover }}" />
-        </div>
-        <div class="block-1-1-2">
-          <a class="js-index-image-1 img" href="{{ site.posts[1].url }}" style="background-image: url({{ site.posts[1].cover }});"></a><img class="mobile-image" src="{{ site.posts[1].cover }}" />
-        </div>
+<div class="content-left">
+  <div class="block-1">
+    <div class="block-1-1">
+      <div class="block-1-1-1">
+        <a class="js-index-image-0 img" href="{{ site.posts[0].url }}" style="background-image: url({{ site.posts[0].cover }});"></a><img class="mobile-image" src="{{ site.posts[0].cover }}" />
       </div>
-      <div class="block-1-2">
-        <a class="js-index-image-2 img" href="{{ site.posts[2].url }}" style="background-image: url({{ site.posts[2].cover }});"></a><img class="mobile-image" src="{{ site.posts[2].cover }}" />
+      <div class="block-1-1-2">
+        <a class="js-index-image-1 img" href="{{ site.posts[1].url }}" style="background-image: url({{ site.posts[1].cover }});"></a><img class="mobile-image" src="{{ site.posts[1].cover }}" />
       </div>
     </div>
-    <div class="block-2">
-      <div class="block-2-1">
-        <a class="js-index-image-3 img" href="{{ site.posts[3].url }}" style="background-image: url({{ site.posts[3].cover }});"></a><img class="mobile-image" src="{{ site.posts[3].cover }}" />
-      </div>
-      <div class="block-2-2">
-        <a class="js-index-image-4 img" href="{{ site.posts[4].url }}" style="background-image: url({{ site.posts[4].cover }});"></a><img class="mobile-image" src="{{ site.posts[4].cover }}" />
-      </div>
+    <div class="block-1-2">
+      <a class="js-index-image-2 img" href="{{ site.posts[2].url }}" style="background-image: url({{ site.posts[2].cover }});"></a><img class="mobile-image" src="{{ site.posts[2].cover }}" />
     </div>
-    <div class="block-3">
-      <div class="block-3-1">
-        <a class="js-index-image-5 img" href="{{ site.posts[5].url }}" style="background-image: url({{ site.posts[5].cover }});"></a><img class="mobile-image" src="{{ site.posts[5].cover }}" />
-      </div>
-      <div class="block-3-2">
-        <div class="block-3-2-1">
-          <a class="js-index-image-6 img" href="{{ site.posts[6].url }}" style="background-image: url({{ site.posts[6].cover }});"></a><img class="mobile-image" src="{{ site.posts[6].cover }}" />
-        </div>
-        <div class="block-3-2-2">
-          <a class="js-index-image-7 img" href="{{ site.posts[7].url }}" style="background-image: url({{ site.posts[7].cover }});"></a><img class="mobile-image" src="{{ site.posts[7].cover }}" />
-        </div>
-      </div>
+  </div>
+  <div class="block-2">
+    <div class="block-2-1">
+      <a class="js-index-image-3 img" href="{{ site.posts[3].url }}" style="background-image: url({{ site.posts[3].cover }});"></a><img class="mobile-image" src="{{ site.posts[3].cover }}" />
     </div>
-    <div class="block-4">
-      <div class="block-4-1">
-        <a class="js-index-image-8 img" href="{{ site.posts[8].url }}" style="background-image: url({{ site.posts[8].cover }});"></a><img class="mobile-image" src="{{ site.posts[8].cover }}" />
+    <div class="block-2-2">
+      <a class="js-index-image-4 img" href="{{ site.posts[4].url }}" style="background-image: url({{ site.posts[4].cover }});"></a><img class="mobile-image" src="{{ site.posts[4].cover }}" />
+    </div>
+  </div>
+  <div class="block-3">
+    <div class="block-3-1">
+      <a class="js-index-image-5 img" href="{{ site.posts[5].url }}" style="background-image: url({{ site.posts[5].cover }});"></a><img class="mobile-image" src="{{ site.posts[5].cover }}" />
+    </div>
+    <div class="block-3-2">
+      <div class="block-3-2-1">
+        <a class="js-index-image-6 img" href="{{ site.posts[6].url }}" style="background-image: url({{ site.posts[6].cover }});"></a><img class="mobile-image" src="{{ site.posts[6].cover }}" />
       </div>
-      <div class="block-4-2">
-        <a class="js-index-image-9 img" href="{{ site.posts[9].url }}" style="background-image: url({{ site.posts[9].cover }});"></a><img class="mobile-image" src="{{ site.posts[9].cover }}" />
+      <div class="block-3-2-2">
+        <a class="js-index-image-7 img" href="{{ site.posts[7].url }}" style="background-image: url({{ site.posts[7].cover }});"></a><img class="mobile-image" src="{{ site.posts[7].cover }}" />
       </div>
     </div>
   </div>
-  <div class="content-right">
-    <div class="block-1">
-      <h1 class="title">
-        {{ site.title }}
-      </h1>
-      <h2 class="subtitle">
-        {{ site.subtitle }}
-      </h2>
+  <div class="block-4">
+    <div class="block-4-1">
+      <a class="js-index-image-8 img" href="{{ site.posts[8].url }}" style="background-image: url({{ site.posts[8].cover }});"></a><img class="mobile-image" src="{{ site.posts[8].cover }}" />
     </div>
-    <div class="block-2">
-      <h2 class="table-contents page-title">
-        TABLE OF CONTENTS
-      </h2>
-      <div class="table-content">
-        <ul>
-          {% for page in site.posts %}
-          <li>
-            <a data-index-image="{{ forloop.index0 }}" href="{{ page.url }}">{{ page.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+    <div class="block-4-2">
+      <a class="js-index-image-9 img" href="{{ site.posts[9].url }}" style="background-image: url({{ site.posts[9].cover }});"></a><img class="mobile-image" src="{{ site.posts[9].cover }}" />
+    </div>
+  </div>
+</div>
+<div class="content-right">
+  <div class="block-1">
+    <h1 class="title">
+      {{ site.title }}
+    </h1>
+    <h2 class="subtitle">
+      {{ site.subtitle }}
+    </h2>
+  </div>
+  <div class="block-2">
+    <h2 class="table-contents page-title">
+      TABLE OF CONTENTS
+    </h2>
+    <div class="table-content">
+      <ul>
+        {% for page in site.posts %}
+        <li>
+          <a data-index-image="{{ forloop.index0 }}" href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
